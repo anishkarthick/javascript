@@ -15,12 +15,10 @@ TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1
 
 //solution
 
-
 // const massMark = 78;
 // const heightMark = 1.69;
 // const massJohn = 92;
 // const heightJohn = 1.95;
-
 
 const massMark = 95;
 const heightMark = 1.88;
@@ -49,7 +47,6 @@ GOOD LUCK 😀
 
 //solution
 
-
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -65,9 +62,9 @@ const BMIJohn = massJohn / (heightJohn * heightJohn);
 console.log(BMIMark, BMIJohn);
 
 if (BMIMark > BMIJohn) {
-  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`)
+  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
 } else {
-  console.log(`John's BMI (${BMIJohn}) is higher than Marks's (${BMIMark})!`)
+  console.log(`John's BMI (${BMIJohn}) is higher than Marks's (${BMIMark})!`);
 }
 
 ////////////////////////////////////
@@ -91,46 +88,51 @@ GOOD LUCK 😀
 
 //solution
 
+let Dolphins = 96 + 108 + 89;
+let Koalas = 88 + 91 + 110;
 
-let Dolphins = 96 + 108 + 89
-let Koalas = 88 + 91 + 110
+const avgDolphins = Dolphins / 3;
+const avgKoalas = Koalas / 3;
 
-const avgDolphins = Dolphins / 3
-const avgKoalas = Koalas / 3
-
-console.log(`avg of Dolphins : ${avgDolphins}`)
-console.log(`avg of Koalas : ${avgKoalas}`)
-
+console.log(`avg of Dolphins : ${avgDolphins}`);
+console.log(`avg of Koalas : ${avgKoalas}`);
 
 if (avgDolphins > avgKoalas) {
-  console.log(`team dolphin wins with lead of ${avgDolphins - avgKoalas} points`)
+  console.log(
+    `team dolphin wins with lead of ${avgDolphins - avgKoalas} points`
+  );
 } else {
-  console.log(`team koalas wins with lead of ${avgKoalas - avgDolphins} points`)
-
+  console.log(
+    `team koalas wins with lead of ${avgKoalas - avgDolphins} points`
+  );
 }
 
 //bonus 1
 
-let Dolphins = 196 + 198 + 95
-let Koalas = 188 + 191 + 110
+let Dolphins = 196 + 198 + 95;
+let Koalas = 188 + 191 + 110;
 
-const avgDolphins = Dolphins / 3
-const avgKoalas = Koalas / 3
+const avgDolphins = Dolphins / 3;
+const avgKoalas = Koalas / 3;
 
-console.log(`avg of Dolphins : ${avgDolphins}`)
-console.log(`avg of Koalas : ${avgKoalas}`)
-
+console.log(`avg of Dolphins : ${avgDolphins}`);
+console.log(`avg of Koalas : ${avgKoalas}`);
 
 if (avgDolphins > avgKoalas && avgDolphins >= 100) {
-  console.log(`team dolphin wins with lead of ${avgDolphins - avgKoalas} points`)
+  console.log(
+    `team dolphin wins with lead of ${avgDolphins - avgKoalas} points`
+  );
 } else if (avgKoalas > avgDolphins && avgKoalas >= 100) {
-  console.log(`team koalas wins with lead of ${avgKoalas - avgDolphins} points`)
-} else if (avgDolphins === avgKoalas && avgDolphins >= 100 && avgKoalas >= 100) {
-  console.log(`both team wins`)
-} else console.log(`no one won`)
-
-
-
+  console.log(
+    `team koalas wins with lead of ${avgKoalas - avgDolphins} points`
+  );
+} else if (
+  avgDolphins === avgKoalas &&
+  avgDolphins >= 100 &&
+  avgKoalas >= 100
+) {
+  console.log(`both team wins`);
+} else console.log(`no one won`);
 
 ////////////////////////////////////
 // Coding Challenge #4
@@ -151,12 +153,19 @@ GOOD LUCK 😀
 
 //solution
 
-let bill = 275
-let tip = bill >= 50 && bill <= 300 ? console.log(`the bill is ${bill} and the tip ${0.15 * bill} with total of ${bill + (0.15 * bill)}`) :
-  console.log(`the bill is ${bill} and the tip ${0.2 * bill} with total of ${bill + (0.2 * bill)}`)
-
-
-
+let bill = 275;
+let tip =
+  bill >= 50 && bill <= 300
+    ? console.log(
+        `the bill is ${bill} and the tip ${0.15 * bill} with total of ${
+          bill + 0.15 * bill
+        }`
+      )
+    : console.log(
+        `the bill is ${bill} and the tip ${0.2 * bill} with total of ${
+          bill + 0.2 * bill
+        }`
+      );
 
 // if (bill >= 50 && bill <= 300) {
 //     tip = 0.15 * bill
@@ -164,6 +173,5 @@ let tip = bill >= 50 && bill <= 300 ? console.log(`the bill is ${bill} and the t
 // } else {
 //     tip = 0.2 * bill
 //     console.log(`the bill is ${bill} and the tip ${tip} with total of ${bill + tip}`)
-// } 
+// }
 //////////////////////////////////////
-

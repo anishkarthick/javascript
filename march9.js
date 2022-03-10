@@ -1,20 +1,19 @@
 /*FUNDAMENTAL PART 2*/
 
-'use strict'
+"use strict";
 
 function describeCountry(country, population, capitalCity) {
-    return `${country} has ${population} population and its captital city is ${capitalCity}`
+  return `${country} has ${population} population and its captital city is ${capitalCity}`;
 }
 
-const data = describeCountry('India', '10 m', 'Delhi');
-const data1 = describeCountry('germany', '14 m', 'berlin');
-const data2 = describeCountry('finland', '5 m', 'helsinki');
+const data = describeCountry("India", "10 m", "Delhi");
+const data1 = describeCountry("germany", "14 m", "berlin");
+const data2 = describeCountry("finland", "5 m", "helsinki");
 console.log(data, data1, data2);
-
 
 //function declaration
 function percentageOfWorld1(population) {
-    return (population / 7900) * 100
+  return (population / 7900) * 100;
 }
 
 const popIndia = percentageOfWorld1(1200);
@@ -23,12 +22,12 @@ const popGermany = percentageOfWorld1(1240);
 
 console.log(`${popIndia}
 ${popChina}
-${popGermany}`)
+${popGermany}`);
 
 // function expression
 const percentageOfWorld2 = function (population) {
-    return (population / 7900) * 100
-}
+  return (population / 7900) * 100;
+};
 
 let pIndia = percentageOfWorld2(1200);
 let pChina = percentageOfWorld2(1441);
@@ -36,10 +35,10 @@ let pGermany = percentageOfWorld2(1240);
 
 console.log(`${pIndia},2
 ${pChina},2
-${pGermany},2`)
+${pGermany},2`);
 
 //arrow functions
-const percentageOfWorld3 = population => (population / 7900) * 100
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
 
 pIndia = percentageOfWorld3(1200);
 pChina = percentageOfWorld3(1441);
@@ -47,24 +46,25 @@ pGermany = percentageOfWorld3(1240);
 
 console.log(`${pIndia},3
 ${pChina},3
-${pGermany},3`)
+${pGermany},3`);
 
 //functions calling functions
 
 let describePopulation = function (country, population) {
-    return `${country} has ${population} million people, which is about ${percentageOfWorld1(1441)}% of the world.'`
-}
-console.log(describePopulation('China', 1441))
+  return `${country} has ${population} million people, which is about ${percentageOfWorld1(
+    1441
+  )}% of the world.'`;
+};
+console.log(describePopulation("China", 1441));
 //---------------------------------------------------------------------------
 describePopulation = function (country, population) {
-    const percentage = percentageOfWorld1(population);
-    const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`;
-    console.log(description);
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`;
+  console.log(description);
 };
-describePopulation('Portugal', 10);
-describePopulation('China', 1441);
-describePopulation('USA', 332);
-
+describePopulation("Portugal", 10);
+describePopulation("China", 1441);
+describePopulation("USA", 332);
 
 ////////////////////////////////////////////////////////////
 /*
@@ -97,50 +97,54 @@ GOOD LUCK �
 
 //solution
 
-let Dolphins = 85 + 54 + 41
-let Koalas = 23 + 34 + 27
+let Dolphins = 85 + 54 + 41;
+let Koalas = 23 + 34 + 27;
 
-const calAverage = (average) => average / 3 //arrow function
+const calAverage = (average) => average / 3; //arrow function
 
-const scoreDolphins = calAverage(Dolphins)
-const scoreKoalas = calAverage(Koalas)
-console.log(scoreDolphins, scoreKoalas)
+const scoreDolphins = calAverage(Dolphins);
+const scoreKoalas = calAverage(Koalas);
+console.log(scoreDolphins, scoreKoalas);
 
-const checkWinner = function (avgDolphins, avgKoalas) {  //function expression
-    if (avgDolphins >= 2 * avgKoalas) {
-        console.log(`Dolphins win (${scoreDolphins} vs ${scoreKoalas})`) //function calling function
-    } else if (avgKoalas >= 2 * avgDolphins) {
-        console.log(`Koalas win (${scoreKoalas} vs ${scoreDolphins})`)
-    } else console.log(`No one won `)
-}
-checkWinner(scoreDolphins, scoreKoalas)
+const checkWinner = function (avgDolphins, avgKoalas) {
+  //function expression
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win (${scoreDolphins} vs ${scoreKoalas})`); //function calling function
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win (${scoreKoalas} vs ${scoreDolphins})`);
+  } else console.log(`No one won `);
+};
+checkWinner(scoreDolphins, scoreKoalas);
 /////////////////////////////////////////////////////////
-
-
 
 //ARRAYS
 
-let populations = [1200, 1441, 10, 200]
-if (populations.length = 4) {
-    console.log(true)
-} else console.log(false)
-const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])]
-console.log('percentages', percentages)
+let populations = [1200, 1441, 10, 200];
+if ((populations.length = 4)) {
+  console.log(true);
+} else console.log(false);
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+console.log("percentages", percentages);
 
 //basic array operation (methods)
 
-const neighbours = ['India', 'China', 'Pakistan']
-neighbours.push('Utopia')
-console.log(neighbours)
-neighbours.pop('Utopia')
-console.log(neighbours)
-if (neighbours.includes('Germany')) console.log('Yeah its a neighbor country')
-else console.log('Sorry its not there')
+const neighbours = ["India", "China", "Pakistan"];
+neighbours.push("Utopia");
+console.log(neighbours);
+neighbours.pop("Utopia");
+console.log(neighbours);
+if (neighbours.includes("Germany")) console.log("Yeah its a neighbor country");
+else console.log("Sorry its not there");
 
 // neighbours[0] = 'republic of India'
-neighbours[neighbours.indexOf('India')] = 'republic of India'
+neighbours[neighbours.indexOf("India")] = "republic of India";
 
-console.log(neighbours)
+console.log(neighbours);
 
 /////////////////////////////////////////////////////////
 /*
@@ -168,30 +172,25 @@ GOOD LUCK �
 
 //Solution
 
-
 const calTip = function (bill) {
-    // if (bill >= 50 && bill <= 300) {
-    //     return 0.15 * bill
-    // } else {
-    //     return 0.2 * bill
-    // }
-    return bill >= 50 && bill <= 300 ? 0.15 * bill : 0.2 * bill
+  // if (bill >= 50 && bill <= 300) {
+  //     return 0.15 * bill
+  // } else {
+  //     return 0.2 * bill
+  // }
+  return bill >= 50 && bill <= 300 ? 0.15 * bill : 0.2 * bill;
+};
 
-}
+calTip(100);
 
-calTip(100)
-
-let bills = [125, 555, 44]
-let tips = [calTip(bills[0]), calTip(bills[1]), calTip(bills[2])]
-console.log(bills, tips)
+let bills = [125, 555, 44];
+let tips = [calTip(bills[0]), calTip(bills[1]), calTip(bills[2])];
+console.log(bills, tips);
 
 //bonus
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
-console.log(total)
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(total);
 /////////////////////////////////////////////////////////////////////////////
-
-
-
 
 //OBJECTS
 
@@ -224,36 +223,36 @@ else console.log(`${anish.name} is a ${anish.age} year old developer , and he do
 console.log(anish.description())
 */
 
-
 const myCountry = {
-    country: 'India',
-    capital: 'Delhi',
-    language: 'Tamil',
-    population: 4,
-    neighbours: ['Russia', 'China', 'Pakistan'],
-    neighbouringCountries: true,
-    describe: function () {
-        return `${this.country} has ${this.population} million ${this.language}-speaking people, 
-        ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`
-    },
-    checkIsland: function () {
-        this.isIsland = this.neighbours.length === 0 ? 'there are no neighbouring countries' :
-            'there are neighbouring countries,'
-    }
-}
+  country: "India",
+  capital: "Delhi",
+  language: "Tamil",
+  population: 4,
+  neighbours: ["Russia", "China", "Pakistan"],
+  neighbouringCountries: true,
+  describe: function () {
+    return `${this.country} has ${this.population} million ${this.language}-speaking people, 
+        ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+  },
+  checkIsland: function () {
+    this.isIsland =
+      this.neighbours.length === 0
+        ? "there are no neighbouring countries"
+        : "there are neighbouring countries,";
+  },
+};
 console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, 
-${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`)
+${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
 
-console.log('hello', myCountry.describe())
-myCountry.checkIsland()
-console.log('hello', myCountry.isIsland)
+console.log("hello", myCountry.describe());
+myCountry.checkIsland();
+console.log("hello", myCountry.isIsland);
 
+myCountry.population = 6;
+console.log(myCountry);
 
-myCountry.population = 6
-console.log(myCountry)
-
-myCountry['population'] = 4
-console.log(myCountry)
+myCountry["population"] = 4;
+console.log(myCountry);
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -275,39 +274,42 @@ tall.
 */
 
 //solution
-console.log('challenge#3')
+console.log("challenge#3");
 const Mark = {
-    firstName: 'Mark',
-    lastName: 'Miller',
-    mass: 78,
-    height: 1.69,
-    calBMI: function () {
-        this.bmi = this.mass / this.height ** 2
-        return this.bmi
-    }
-}
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+  calBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
 
 const Jhon = {
-    firstName: 'Jhon',
-    lastNmae: 'Smith',
-    mass: 92,
-    height: 1.95,
-    calBMI: function () {
-        this.bmi = this.mass / this.height ** 2
-        return this.bmi
-    }
-}
+  firstName: "Jhon",
+  lastNmae: "Smith",
+  mass: 92,
+  height: 1.95,
+  calBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
 
-Mark.calBMI()
-Jhon.calBMI()
+Mark.calBMI();
+Jhon.calBMI();
 
-console.log(Mark.bmi)
-console.log(Jhon.bmi)
+console.log(Mark.bmi);
+console.log(Jhon.bmi);
 
-
-
-Mark.bmi > Jhon.bmi ? console.log(`${Mark.firstName}'s BMI (${Mark.bmi}) is higher than ${Jhon.firstName}'s (${Jhon.bmi})!`) :
-    console.log(`${Jhon.firstName}'s BMI (${Jhon.bmi}) is higher than ${Mark.firstName}'s (${Mark.bmi})!`)
+Mark.bmi > Jhon.bmi
+  ? console.log(
+      `${Mark.firstName}'s BMI (${Mark.bmi}) is higher than ${Jhon.firstName}'s (${Jhon.bmi})!`
+    )
+  : console.log(
+      `${Jhon.firstName}'s BMI (${Jhon.bmi}) is higher than ${Mark.firstName}'s (${Mark.bmi})!`
+    );
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //LOOPS
@@ -321,22 +323,21 @@ Mark.bmi > Jhon.bmi ? console.log(`${Mark.firstName}'s BMI (${Mark.bmi}) is high
 populations = [10, 1441, 332, 83];
 const percentages2 = [];
 for (let i = 0; i < populations.length; i++) {
-    const perc = percentageOfWorld1(populations[i]);
-    percentages2.push(perc);
+  const perc = percentageOfWorld1(populations[i]);
+  percentages2.push(perc);
 }
 console.log(percentages2);
 
-
 //loop inside loop
 const listOfNeighbours = [
-    ['Canada', 'Mexico'],
-    ['Spain'],
-    ['Norway', 'Sweden', 'Russia']
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
 ];
 
 for (let i = 0; i < listOfNeighbours.length; i++)
-    for (let y = 0; y < listOfNeighbours[i].length; y++)
-        console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+  for (let y = 0; y < listOfNeighbours[i].length; y++)
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
 /////////////////////////////////////////////////////
 
 /*
@@ -354,14 +355,14 @@ tips and totals arrays �
 GOOD LUCK �
 */
 
-bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
-const tip = []
-const totals = []
+bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tip = [];
+const totals = [];
 
 for (let i = 0; i < bills.length; i++) {
-    tip.push(calTip(bills[i]))
-    totals.push(calTip(bills[i]) + bills[i])
+  tip.push(calTip(bills[i]));
+  totals.push(calTip(bills[i]) + bills[i]);
 }
-console.log('BILL:', bills, 'TIP:', tip, 'TOTAL:', totals)
+console.log("BILL:", bills, "TIP:", tip, "TOTAL:", totals);
 
 ///////////////////////////////////////////////////////////////////
